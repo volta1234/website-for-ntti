@@ -1,14 +1,7 @@
-*,
-*:before,
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Nunito', sans-serif;
-    color: #384047;
+    background-image: url("https://media.istockphoto.com/id/1472630557/photo/soy-field-in-early-morning-soy-agriculture.jpg?s=1024x1024&w=is&k=20&c=NbXZCjlYPKGZ_dt_MS_O5FnGsQuaBQBIYJ9QYntHS6I=");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 form {
