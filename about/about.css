@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #8b8282;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.about-section h2 {
+    color: #333;
+}
+
+footer {
+    background-color: #8b8282;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.toggle-button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.toggle-button::before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    border-radius: 50%;
+    z-index: 0;
+    transition: all 0.5s ease-out;
+    transform: translate(-50%, -50%);
+}
+
+.toggle-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.toggle-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
