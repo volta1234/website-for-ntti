@@ -25,7 +25,7 @@ input {
     margin: 0;
     outline: 0;
     padding: 10px;
-    width: 100%;
+    width: 95%;
     background-color: #e8eeef;
     color: #484e52;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
@@ -87,4 +87,22 @@ label.light {
     form {
         max-width: 480px;
     }
+}
+
+.password-input {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    left: 220px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: rgba(58, 55, 55, 0.9);
+    top: 20px;
+
 }
