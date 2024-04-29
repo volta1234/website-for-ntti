@@ -10,6 +10,8 @@ form {
     padding: 10px 20px;
     background: #f4f7f8;
     border-radius: 8px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
