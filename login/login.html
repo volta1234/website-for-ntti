@@ -11,23 +11,24 @@
 <body>
     <div class="login-box">
         <h2>Login</h2>
-        <form>
+        <form onsubmit="validatePassword(event)">
             <div class="user-box">
-                <input type="email" name="" required="">
+                <input type="email" name="email" required>
                 <label>Email</label>
             </div>
             <div class="user-box">
-                <input type="password" name="" required="">
+                <input type="password" id="password" name="password" required>
                 <label>Password</label>
             </div>
-            <a href="#">
+            <div class="validatedpassword"></div>
+            <button style="border: none;" id="loginbutton" type="submit">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Login
-            </a>
-            <a href="../home.html">Home</a>
+            </button>
+            <button style="border: none;" id="loginbutton" href="../home.html">Home</button>
         </form>
     </div>
     <script src="./login.js"></script>

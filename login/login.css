@@ -56,7 +56,7 @@ label {
     font-size: 12px;
 }
 
-a {
+#loginbutton {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -70,7 +70,7 @@ a {
     letter-spacing: 4px
 }
 
-a:hover {
+#loginbutton:hover {
     background: lightskyblue;
     color: #fff;
     border-radius: 5px;
@@ -80,12 +80,12 @@ a:hover {
         0 0 50px grey;
 }
 
-.login-box a span {
+span {
     position: absolute;
     display: block;
 }
 
-.login-box a span:nth-child(1) {
+span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -105,7 +105,7 @@ a:hover {
     }
 }
 
-.login-box a span:nth-child(2) {
+span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -126,7 +126,7 @@ a:hover {
     }
 }
 
-.login-box a span:nth-child(3) {
+span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -147,7 +147,7 @@ a:hover {
     }
 }
 
-.login-box a span:nth-child(4) {
+span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
