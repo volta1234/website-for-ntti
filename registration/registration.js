@@ -13,40 +13,46 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// 1. create a funcion to validate password.
-// 2. the function should chect if the password contains:
-//     a. start with an uppercase letter
-//     b. have at least 8 characters
-//     c. have at least 2 numbers
-//     d. have at least 1 special characters
-// 3. create a function to handle the form submission which checks if the password conditions are met and if not displays
-//    the password requirements.
+function validatePassword(event) {
+    event.preventDefault();
+    var password = document.getElementById("password").value;
+    var validationResult = document.querySelector(".validatedpassword");
 
-function validatePassword(password) {
-    if (!/[A-Z]/.test(password.charAt(0))) {
-        return false;
-    }
+    var specialCharRegex = /[^a-zA-Z0-9]/;
+
+    var numbersRegex = /\d/g;
+    var countNumbers = (password.match(numbersRegex) || []).length;
+
+    var requirements = [];
+
     if (password.length < 8) {
-        return false;
+        requirements.push("Password must be at least 8 characters");
     }
-    if ((password.match(/\d/g) || []).length < 2) {
-        return false;
+
+    if (!/[A-Z]/.test(password)) {
+        requirements.push("Password must contain at least one capital letter");
     }
-    if (!/[\W_]/.test(password)) {
-        return false;
+
+    if (countNumbers < 2) {
+        requirements.push("Password must contain at least two numbers");
     }
-    return true;
+
+    if (!specialCharRegex.test(password)) {
+        requirements.push("Password must contain at least one special character");
+    }
+
+    if (requirements.length > 0) {
+        var ul = document.createElement("ul");
+        requirements.forEach(function (requirement) {
+            var li = document.createElement("li");
+            li.textContent = requirement;
+            ul.appendChild(li);
+        });
+        validationResult.innerHTML = "";
+        validationResult.appendChild(ul);
+        validationResult.style.color = "red";
+    } else {
+        validationResult.textContent = "Succes, complete signup";
+        validationResult.style.color = "green";
+    }
 }
-
-document.getElementsById('signupform').addEventListener('submit', function(event) {
-    var passwordInput = document.getElementById('password');
-    var password = passwordInput.value;
-
-    if (!validatePassword(password)) {
-        alert('Password does not meet the requirements.');
-        event.preventDefault();
-    }
-});
-
-console.log("password")
-

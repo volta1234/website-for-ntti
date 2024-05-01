@@ -108,3 +108,11 @@ label.light {
     top: 20px;
 
 }
+
+.password-requirements {
+    color: red;
+}
+
+.password-valid {
+    color: green;
+}

@@ -19,7 +19,7 @@
     <div class="background">
         <div class="row">
             <div class="col-md-12">
-                <form id="signupform" action="index.html" method="post">
+                <form id="signupform" action="index.html" method="post" onsubmit="validatePassword(event)">
                     <h1> Sign Up </h1>
                     <p id="title"><span class="number">1</span> Your Basic Info</p>
                     <label for="name">Name:</label>
@@ -34,6 +34,7 @@
                                 visibility
                             </span>
                         </button>
+                        <div class="validatedpassword"></div>
                     </div>
                     <button type="submit">Sign Up</button>
                     <p style="margin-left: 80px;">You already have an account? <a style="text-decoration: none;"
@@ -42,7 +43,8 @@
                 </form>
             </div>
         </div>
-        <script src="registration.js"></script>
+    </div>
+    <script src="./registration.js"></script>
 </body>
 
 </html>

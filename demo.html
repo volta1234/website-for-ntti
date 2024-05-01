@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Validation</title>
+</head>
+<body>
+  <input type="text" id="passwordInput" placeholder="Enter your password">
+  <button onclick="validatePassword()">Validate Password</button>
+  <div id="validationResult"></div>
+
+  <script>
+    function validatePassword() {
+      var password = document.getElementById("passwordInput").value;
+      var validationResult = document.getElementById("validationResult");
+
+      var specialCharRegex = /[^a-zA-Z0-9]/;
+
+      var numbersRegex = /\d/g;
+      var countNumbers = (password.match(numbersRegex) || []).length;
+
+      var requirements = [];
+
+      if (password.length < 8) {
+        requirements.push("Password must be at least 8 characters");
+      }
+
+      if (!/[A-Z]/.test(password)) {
+        requirements.push("Password must contain at least one capital letter");
+      }
+
+      if (countNumbers < 2) {
+        requirements.push("Password must contain at least two numbers");
+      }
+
+      if (!specialCharRegex.test(password)) {
+        requirements.push("Password must contain at least one special character");
+      }
+
+      if (requirements.length > 0) {
+        var ul = document.createElement("ul");
+        requirements.forEach(function(requirement) {
+          var li = document.createElement("li");
+          li.textContent = requirement;
+          ul.appendChild(li);
+        });
+        validationResult.innerHTML = "";
+        validationResult.appendChild(ul);
+        validationResult.style.color = "red";
+      } else {
+        validationResult.textContent = "Success";
+        validationResult.style.color = "green";
+      }
+    }
+  </script>
+</body>
+</html> -->
