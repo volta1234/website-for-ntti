@@ -56,7 +56,7 @@ label {
     font-size: 12px;
 }
 
-#loginbutton {
+.loginbutton {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -70,7 +70,7 @@ label {
     letter-spacing: 4px
 }
 
-#loginbutton:hover {
+.loginbutton:hover {
     background: lightskyblue;
     color: #fff;
     border-radius: 5px;
